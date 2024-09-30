@@ -5,6 +5,7 @@
 
 ## Step 1: Create SSH Keys
 - SSH keys are used to securely authenticate the identity of of a client when accessing a host. We will be creating two keys, one public key for the host, and one private key which will unlock access to the host.
+
 1. Navigate to your home directory. 
 - In windows this will generally be `C:\Users\username`, with username replaced by your windows username.
 2. Check for the existence of a directory titled `.ssh`
@@ -26,13 +27,17 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
 2. Copy the text string inside one_key.pub.
 
+
 3. Navigate to the Digital Ocean website and log in to your account.
 
 4. Click Settings on the left of the browser window.
 
+
 5. Click the Security tab beneath the Settings heading.
 
+
 6. Click Add SSH Key.
+
 
 7. Paste the text string you copied from one_key.pub into the Public Key field.
 
@@ -43,8 +48,11 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ## Step 3: Download Arch Linux Image
 1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
 2. Click images in the most recently uploaded row.
+
+
 3. Click the image name that contains "cloudimg" and ends in ".qcow2".
-- The download should start automatically and is roughly 500MB in size.
+
+- Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
 
 ## Step 4: Upload Arch Linux Image to Digital Ocean
 1. Navigate to the Digital Ocean website and log in to your account.
