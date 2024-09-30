@@ -293,6 +293,15 @@ doctl compute image list | grep Arch
 ```
 doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel --image replacethis --user-data-file droplets.sh --ssh-keys replacethis --wait
 ```
+- Note: you can find more information on the doctl command line interface at https://docs.digitalocean.com/reference/doctl/
+- Note: archy is the name of the droplet you'll be creating
+- Note: the --region flag is used to set the region for your droplet, sfo3 refers to san francisco 3 here
+- Note: the --size flag refers to the size of droplet we'll be creating
+- Note: the --image flag is used to specify the image we want to create the droplet from
+- Note: the --user-data-file flag is used to specify a file which can automate configuration of the droplet
+- Note: the --ssh-keys flag is used to specify the ssh keys we want to use with this droplet
+- Note: the --wait flag is used to pause the command line until the command finishes and the droplet is created
+
 4. Delete the **"replacethis"** after image and replace it with the **number you wrote down on Instruction #2**.
 
 5. Navigate to Digital Ocean and log in.
