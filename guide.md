@@ -322,5 +322,7 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 
 10. Enter the command. After a few moments you should receieve a message that looks something like this:
 ![alt text](image-35.png)
+- You will have another droplet up and running in your project similar to this:
+![alt text](image-40.png)
 
 ## Congratulations! You've accomplished everything!
