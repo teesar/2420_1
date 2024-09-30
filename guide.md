@@ -53,7 +53,12 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 4. Click Upload Image.
 5. Browse your computer to find the image you downloaded and press Open.
 6. Click Choose a Distribution.
-7. 
+7. Click Arch Linux.
+8. Click the Datacenter Region closest geographically to your location.
+- Note: This is the server your image will be uploaded to, using the datacenter closest to your location will provide the lowest latency when accessing it.
+9. Click Upload Image.
+- Note: There will be a charge of $.06 per GB per month to store this image.
+
 
 ## Create Droplent Running Arch Linux
 
