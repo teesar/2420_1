@@ -1,18 +1,21 @@
 <!-- Start of the project -->
 # Assignment 1
-## Heading 2
-## Today we will be going through the steps necessary to host a droplet (virtual private server) on your Digital Ocean account, securely access it using ssh keys, and using your droplet to create a second droplet with a set configuration.
+
+#### Today we will be going through the steps necessary to host a droplet (virtual private server) on your Digital Ocean account, securely access it using ssh keys, and use your droplet to create a second droplet with a set configuration.
 
 ## Step 1: Create SSH Keys
 - SSH keys are used to securely authenticate the identity of of a client when accessing a host. We will be creating two keys, one public key for the host, and one private key which will unlock access to the host.
 
 1. Navigate to your home directory. 
 - In windows this will generally be `C:\Users\username`, with username replaced by your windows username.
+
 2. Check for the existence of a directory titled `.ssh`
+
 3. If this directory does not exist please create it now.
 - The .ssh directory will be used to store the SSH keys you create.
 
 4. Open a terminal and run the following command:
+
 - Note: Replace username with your windows username. Replace email@gmail.com with your email.
 ```
 ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C 
@@ -23,18 +26,24 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 * You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your Digital Ocean account. 
 
+
 ## Step 2: Add Public SSH Key to Digital Ocean Account
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
+
 2. Copy the text string inside one_key.pub.
 ![alt text](image.png)
 
+
 3. Navigate to the Digital Ocean website and log in to your account.
+
 
 4. Click Settings on the left of the browser window.
 ![alt text](image.png)
 
+
 5. Click the Security tab beneath the Settings heading.
 ![alt text](image.png)
+
 
 6. Click Add SSH Key.
 ![alt text](image.png)
@@ -48,23 +57,31 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 ## Step 3: Download Arch Linux Image
 1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
+
 2. Click images in the most recently uploaded row.
 ![alt text](image-3.png)
 
+
 3. Click the image name that contains "cloudimg" and ends in ".qcow2".
 ![alt text](image-4.png)
+
 - Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
+
 
 ## Step 4: Upload Arch Linux Image to Digital Ocean
 1. Navigate to the Digital Ocean website and log in to your account.
+
 2. Click Backups & Snapshots on the menu on the left side of the screen.
 ![alt text](image-5.png)
+
 
 3. Click Custom Images.
 ![alt text](image-6.png)
 
+
 4. Click Upload Image.
 ![alt text](image-7.png)
+
 
 5. Browse your computer to find the image you downloaded and press Open.
 ![alt text](image-8.png)
@@ -117,13 +134,23 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ## Step 6: Create Digital Ocean API Key
 1. Navigate to the Digital Ocean website and log in to your account. 
 2. Click API on the left menu near the bottom.
+![alt text](image-21.png)
+
 3. Click Generate New Token.
+![alt text](image-22.png)
+
 4. Type a name for the token into the Token Name field.
+![alt text](image-23.png)
+
 5. Click Full Access. This will give your API key read and write permissions so that you can create and edit droplets through the command line.
+![alt text](image-24.png)
+
 6. Click Generate Token.
 - The page will redirect you to the API section and a personal access token will appear.
+![alt text](image-25.png)
 
-7. Click the Copy icon to copy the personal access token, then save it in a safe place. 
+7. Click the Copy icon to copy the personal access token, then save it in a safe place.
+![alt text](image-26.png) 
 
 ## Step 7: Connect To Your Droplet Through SSH
 1. Open a terminal window on your computer.
@@ -135,10 +162,13 @@ ssh -i .ssh/one_key arch@
 
 2. Click the name of the project you saved your droplet in at the top of the left menu.
 - Note: If this is your first Digital Ocean project, the project is likely called "first-project".
+![alt text](image-27.png)
 
-3. Click the IP address of your droplet to copy it.
+3. Click Copy next to the IP address of your droplet to copy it.
+![alt text](image-29.png)
 
 4. Return to the terminal window you opened and paste the ip address after the @ from your entry.
+![alt text](image-30.png)
 
 5. Press enter to run the command.
 - Note: The -i flag is used to set the path to the private SSH key you created earlier.
@@ -185,6 +215,7 @@ doctl auth switch --context dev
 ```
 doctl account get
 ```
+![alt text](image-31.png)
 
 
 ## Step 9: Create Config File On Droplet
