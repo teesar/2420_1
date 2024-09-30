@@ -1,7 +1,7 @@
 <!-- Start of the project -->
 # Assignment 1
 
-#### Today we will be going through the steps necessary to host a droplet (virtual private server) on your DigitalOcean account, securely access it using ssh keys, and use your droplet to create a second droplet with a set configuration.
+#### Today we will be going through the steps necessary to host a droplet (virtual private server) on your DigitalOcean account, securely access it using ssh keys, and use your droplet to create a second droplet with a partially automated configuration.
 
 ## Step 1: Create SSH Keys
 
