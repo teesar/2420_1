@@ -39,21 +39,21 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 3. Navigate to the Digital Ocean website and log in to your account.
 
 
-4. Click Settings on the left of the browser window.
+4. Click **Settings** on the left of the browser window.
 ![alt text](image-33.png)
 
 
-5. Click the Security tab beneath the Settings heading.
+5. Click the **Security** beneath the Settings heading.
 ![alt text](image-34.png)
 
 
-6. Click Add SSH Key.
+6. Click **Add SSH Key**.
 ![alt text](image.png)
 
-7. Paste the text string you copied from one_key.pub into the Public Key field.
+7. Paste the text string you copied from one_key.pub into the **Public Key field**.
 ![alt text](image-1.png)
 
-8. Type in a name for your key in the Key Name field.
+8. Type in a name for your key in the **Key Name field**.
 - Note: The key name can be used to help differentiate between keys that you add to your Digital Ocean account. 
 ![alt text](image-2.png)
 
@@ -61,11 +61,11 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
 
-2. Click images in the most recently uploaded row.
+2. Click **images** in the most recently uploaded row.
 ![alt text](image-3.png)
 
 
-3. Click the image name that contains "cloudimg" and ends in ".qcow2".
+3. Click the **image name** that contains "cloudimg" and ends in ".qcow2".
 ![alt text](image-4.png)
 
 - Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
@@ -75,30 +75,30 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 1. Navigate to the Digital Ocean website and log in to your account.
 
-2. Click Backups & Snapshots on the menu on the left side of the screen.
+2. Click **Backups & Snapshots** on the menu on the left side of the screen.
 ![alt text](image-5.png)
 
 
-3. Click Custom Images.
+3. Click **Custom Images**.
 ![alt text](image-6.png)
 
 
-4. Click Upload Image.
+4. Click **Upload Image**.
 ![alt text](image-7.png)
 
 
 5. Browse your computer to find the image you downloaded and press Open.
 ![alt text](image-8.png)
 
-6. Click Choose a Distribution.
-7. Click Arch Linux.
+6. Click **Choose a Distribution**.
+7. Click **Arch Linux**.
 ![alt text](image-9.png)
 
-8. Click the Datacenter Region closest geographically to your location.
+8. Click the **Datacenter Region** closest geographically to your location.
 - Note: This is the server your image will be uploaded to, using the datacenter closest to your location will provide the lowest latency when accessing it. San Francisco shown here for demonstration purposes.
 ![alt text](image-10.png)
 
-9. Click Upload Image.
+9. Click **Upload Image**.
 - Note: There will be a charge of $.06 per GB per month to store this image.
 ![alt text](image-11.png)
 
@@ -107,71 +107,71 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 1. Navigate to the Digital Ocean website and log in to your account.
 
-2. Click Create near the top of the page.
+2. Click **Create** near the top of the page.
 ![alt text](image-12.png)
 
 
-3. Click Droplets.
+3. Click **Droplets**.
 ![alt text](image-13.png)
 
 
-4. Click the Region geographically closest to your location.
+4. Click the **Region** geographically closest to your location.
 ![alt text](image-14.png)
 
 
-5. Click Custom Images below the Choose an image heading.
+5. Click **Custom Images** below the Choose an image heading.
 
-6. Click the image you uploaded in step 4.
+6. Click the **image** you uploaded in step 4.
 ![alt text](image-15.png)
 
 
-7. Click Premium Intel or Premium AMD under the CPU options heading.
+7. Click **Premium Intel** or **Premium AMD** under the CPU options heading.
 ![alt text](image-16.png)
 
 
-8. Click the $8/mo option.
+8. Click the **$8/mo option**.
 ![alt text](image-17.png)
 
 
-9. Click SSH Key under the Choose Authentication Method heading.
+9. Click **SSH Key** under the Choose Authentication Method heading.
 ![alt text](image-18.png)
 
 
-10. Click the SSH key that you added to your Digital Ocean Account.
+10. Click the **SSH key** that you added to your Digital Ocean Account.
 - Note: Your key names will be different from this sample image.
 ![alt text](image-19.png)
 
 
-11. Delete the text in the Hostname field and replace it with a short nickname.
-12. Click Create Droplet.
+11. Delete the text in the **Hostname field** and replace it with a short **nickname**.
+12. Click **Create Droplet**.
 ![alt text](image-20.png)
 
 
 ## Step 6: Create Digital Ocean API Key
 
 1. Navigate to the Digital Ocean website and log in to your account. 
-2. Click API on the left menu near the bottom.
+2. Click **API**on the left menu near the bottom.
 ![alt text](image-21.png)
 
 
-3. Click Generate New Token.
+3. Click **Generate New Token**.
 ![alt text](image-22.png)
 
 
-4. Type a name for the token into the Token Name field.
+4. Type a name for the token into the **Token Name field**.
 ![alt text](image-23.png)
 
 
-5. Click Full Access. This will give your API key read and write permissions so that you can create and edit droplets through the command line.
+5. Click **Full Access**. This will give your API key read and write permissions so that you can create and edit droplets through the command line.
 ![alt text](image-24.png)
 
 
-6. Click Generate Token.
+6. Click **Generate Token**.
 - The page will redirect you to the API section and a personal access token will appear.
 ![alt text](image-25.png)
 
 
-7. Click the Copy icon to copy the personal access token, then save it in a safe place.
+7. Click the **copy icon** to copy the personal access token, then save it in a safe place.
 ![alt text](image-26.png) 
 
 
@@ -184,20 +184,20 @@ ssh -i .ssh/one_key arch@
 ```
 2. Navigate to the Digital Ocean website and log in to your account.
 
-2. Click the name of the project you saved your droplet in at the top of the left menu.
+2. Click the **name of the project** you saved your droplet in at the top of the left menu.
 - Note: If this is your first Digital Ocean project, the project is likely called "first-project".
 ![alt text](image-27.png)
 
 
-3. Click Copy next to the IP address of your droplet to copy it.
+3. Click **Copy** next to the IP address of your droplet to copy it.
 ![alt text](image-29.png)
 
 
-4. Return to the terminal window you opened and paste the ip address after the @ from your entry.
+4. Return to the terminal window you opened and paste the ** after the @ from your entry.
 ![alt text](image-30.png)
 
 
-5. Press enter to run the command.
+5. Press **enter** to run the command.
 - Note: The -i flag is used to set the path to the private SSH key you created earlier.
 - Note: The "arch" is a user that exists on the Arch Linux image.
 
@@ -221,7 +221,6 @@ sudo pacman -S neovim doctl
 ```
 - Note: Doctl is the command line interface for accessing Digital Ocean that you'll use for further droplet creation.
 - Note: Neovim is a text editor you'll use to create a config file for automating aspects of droplet creation through the command line.
-
 - Note: This may take several minutes to complete.
 
 3. Run the following command to allow doctl to access your DigitalOcean account.
@@ -252,17 +251,17 @@ doctl account get
 nvim droplets.sh
 ```
 
-2. Type i to enter insert mode.
+2. Type **i** to enter insert mode.
 
 3. Copy the following code and paste it into your configuration file.
 ```
 users:
-  - name: ***
+  - name: replacethis
     groups: wheel
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ***
+      - replacethis
 
 packages:
   - neovim
@@ -271,13 +270,13 @@ packages:
 disable_root: true
 ```
 
-4. Delete the "***" after name: and then type a username you'll use to access the droplet.
+4. Delete the **"replacethis"** after name: and then type a username you'll use to access the droplet.
 
-5. Delete the "***" after the dash below ssh-authorized-keys: and then copy and paste the text contained in your public SSH key one_key.pub that you created on Step 1.
+5. Delete the **"replacethis"** after the dash below ssh-authorized-keys: and then copy and paste the text contained in your public SSH key one_key.pub that you created on Step 1.
 
-6. Hit the escape key.
+6. Hit the **escape key**.
 
-7. Type ":wq" and press enter. This will write and save the file then quit nvim.
+7. Type **":wq"** and press **enter**. This will write and save the file then quit nvim.
 
 ## Step 10: Create New Droplet 
 
@@ -287,30 +286,30 @@ doctl compute image list | grep Arch
 ```
 - Note: This searches Digital Ocean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
 
-2. Write down the number to the left of the image result.
+2. Write down the **number to the left of the image result**.
 ![alt text](image-36.png)
 
 3. Copy and paste the following command:
 ```
-doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel --image *** --user-data-file droplets.sh --ssh-keys *** --wait
+doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel --image replacethis --user-data-file droplets.sh --ssh-keys replacethis --wait
 ```
-4. Delete the "***" after image and replace it with the number you wrote down on Instruction #2.
+4. Delete the **"replacethis"** after image and replace it with the **number you wrote down on Instruction #2**.
 
 5. Navigate to Digital Ocean and log in.
 
-6. Click Settings near the bottom of the left menu.
+6. Click **Settings** near the bottom of the left menu.
 ![alt text](image-37.png)
 
 
-7. Click Security.
+7. Click **Security**.
 ![alt text](image-38.png)
 
 
-8. Click the copy icon to copy the Fingerprint of the key you created earlier.
+8. Click the **copy icon** to copy the Fingerprint of the key you created earlier.
 ![alt text](image-39.png)
 
 
-9. Back on the terminal window, delete the "***" after ssh-keys and replace it with with the key fingerprint you have copied.
+9. Back on the terminal window, delete the **"replacethis"** after ssh-keys and replace it with with the **key fingerprint** you have copied.
 
 10. Enter the command. After a few moments you should receieve a message that looks something like this:
 ![alt text](image-35.png)
