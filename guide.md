@@ -60,7 +60,20 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: There will be a charge of $.06 per GB per month to store this image.
 
 
-## Create Droplent Running Arch Linux
+## Step 5: Create Droplent Running Arch Linux
+1. Navigate to the Digital Ocean website and log in to your account.
+2. Click Create.
+3. Click Droplets.
+4. Click the Region geographically closest to your location.
+5. Click Custom Images below the Choose an image heading.
+6. Click the image you uploaded in step 4.
+7. Click Premium Intel or Premium AMD under the CPU options heading.
+8. Click the $8/mo option.
+9. Click SSH Key under the Choose Authentication Method heading.
+10. Click the SSH key that you added to your Digital Ocean Account.
+- Note: Your key names will be different from this sample image.
+11. Delete the Hostname text and replace it with a short nickname.
+12. Click Create Droplet.
 
 ## Create Digital Ocean API Key
 
