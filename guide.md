@@ -72,6 +72,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 ## Step 4: Upload Arch Linux Image to Digital Ocean
+
 1. Navigate to the Digital Ocean website and log in to your account.
 
 2. Click Backups & Snapshots on the menu on the left side of the screen.
@@ -103,6 +104,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 ## Step 5: Create Droplent Running Arch Linux
+
 1. Navigate to the Digital Ocean website and log in to your account.
 
 2. Click Create near the top of the page.
@@ -146,6 +148,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 ## Step 6: Create Digital Ocean API Key
+
 1. Navigate to the Digital Ocean website and log in to your account. 
 2. Click API on the left menu near the bottom.
 ![alt text](image-21.png)
@@ -173,6 +176,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 ## Step 7: Connect To Your Droplet Through SSH
+
 1. Open a terminal window on your computer.
 2. Copy and paste the following code into the terminal, but don't run it yet.
 ```
@@ -242,6 +246,7 @@ doctl account get
 
 
 ## Step 9: Create Config File On Droplet
+
 1. Enter the following command to create a droplet configuration file.
 ```
 nvim droplets.sh
@@ -275,6 +280,7 @@ disable_root: true
 7. Type ":wq" and press enter. This will write and save the file then quit nvim.
 
 ## Step 10: Create New Droplet 
+
 1. Run the following command to locate the image you uploaded earlier.
 ```
 doctl compute image list | grep Arch
