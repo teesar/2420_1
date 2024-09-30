@@ -23,14 +23,37 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 * You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your Digital Ocean account. 
 
 ## Step 2: Add Public SSH Key to Digital Ocean Account
+1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
+2. Copy the text string inside one_key.pub.
+
+3. Navigate to the Digital Ocean website and log in to your account.
+
+4. Click Settings on the left of the browser window.
+
+5. Click the Security tab beneath the Settings heading.
+
+6. Click Add SSH Key.
+
+7. Paste the text string you copied from one_key.pub into the Public Key field.
+
+8. Type in a name for your key in the Key Name field.
+- Note: The key name can be used to help differentiate between keys that you add to your Digital Ocean account. 
 
 
+## Step 3: Download Arch Linux Image
+1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
+2. Click images in the most recently uploaded row.
+3. Click the image name that contains "cloudimg" and ends in ".qcow2".
+- The download should start automatically and is roughly 500MB in size.
 
-
-## Step 2: Download Arch Linux Image
-
-
-## Upload Arch Linux Image to Digital Ocean
+## Step 4: Upload Arch Linux Image to Digital Ocean
+1. Navigate to the Digital Ocean website and log in to your account.
+2. Click Backups & Snapshots on the menu on the left side of the screen.
+3. Click Custom Images.
+4. Click Upload Image.
+5. Browse your computer to find the image you downloaded and press Open.
+6. Click Choose a Distribution.
+7. 
 
 ## Create Droplent Running Arch Linux
 
