@@ -52,37 +52,67 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ![alt text](image-3.png)
 
 3. Click the image name that contains "cloudimg" and ends in ".qcow2".
-
+![alt text](image-4.png)
 - Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
 
 ## Step 4: Upload Arch Linux Image to Digital Ocean
 1. Navigate to the Digital Ocean website and log in to your account.
 2. Click Backups & Snapshots on the menu on the left side of the screen.
+![alt text](image-5.png)
+
 3. Click Custom Images.
+![alt text](image-6.png)
+
 4. Click Upload Image.
+![alt text](image-7.png)
+
 5. Browse your computer to find the image you downloaded and press Open.
+![alt text](image-8.png)
+
 6. Click Choose a Distribution.
 7. Click Arch Linux.
+![alt text](image-9.png)
+
 8. Click the Datacenter Region closest geographically to your location.
-- Note: This is the server your image will be uploaded to, using the datacenter closest to your location will provide the lowest latency when accessing it.
+- Note: This is the server your image will be uploaded to, using the datacenter closest to your location will provide the lowest latency when accessing it. San Francisco shown here for demonstration purposes.
+![alt text](image-10.png)
+
 9. Click Upload Image.
 - Note: There will be a charge of $.06 per GB per month to store this image.
+![alt text](image-11.png)
 
 
 ## Step 5: Create Droplent Running Arch Linux
 1. Navigate to the Digital Ocean website and log in to your account.
 2. Click Create near the top of the page.
+![alt text](image-12.png)
+
 3. Click Droplets.
+![alt text](image-13.png)
+
 4. Click the Region geographically closest to your location.
+![alt text](image-14.png)
+
 5. Click Custom Images below the Choose an image heading.
 6. Click the image you uploaded in step 4.
+![alt text](image-15.png)
+
 7. Click Premium Intel or Premium AMD under the CPU options heading.
+![alt text](image-16.png)
+
 8. Click the $8/mo option.
+![alt text](image-17.png)
+
 9. Click SSH Key under the Choose Authentication Method heading.
+![alt text](image-18.png)
+
 10. Click the SSH key that you added to your Digital Ocean Account.
 - Note: Your key names will be different from this sample image.
-11. Delete the Hostname text and replace it with a short nickname.
+![alt text](image-19.png)
+
+11. Delete the text in the Hostname field and replace it with a short nickname.
 12. Click Create Droplet.
+![alt text](image-20.png)
 
 ## Step 6: Create Digital Ocean API Key
 1. Navigate to the Digital Ocean website and log in to your account. 
