@@ -276,6 +276,7 @@ packages:
 
 disable_root: true
 ```
+- (McNinch, 2024)
 
 4. Delete the **"replacethis"** after name: and then type a username you'll use to access the droplet.
 
