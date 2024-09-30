@@ -154,4 +154,29 @@ doctl account get
 nvim droplets.sh
 ```
 
+2. Type i to enter insert mode.
+
+3. Copy the following code and paste it into your configuration file.
+```
+users:
+  - name: ***
+    groups: wheel
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ***
+
+packages:
+  - neovim
+  - doctl
+
+disable_root: true
+```
+
+4. Delete the "***" after name: and then type a username you'll use to access the droplet.
+5. Delete the "***" after the dash below ssh-authorized-keys: and then copy and paste the text contained in your public SSH key one_key.pub that you created on Step 1.
+
+6. Hit the escape key.
+7. Type ":wq" and press enter. This will write and save the file then quit nvim.
+
 ## Step 9: Create New Droplet 
