@@ -341,23 +341,23 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 
 
 # Resources and Citations
-Arch Linux. (2024). pacman.
+Arch Linux. (2024). pacman.<br>
 https://wiki.archlinux.org/title/Pacman#:~:text=If%20you%20cannot%20enter%20the%20arch-chroot%20or
 
-SSH Academy. (N.D). How to Use ssh-keygen to Generate a New SSH Key?
+SSH Academy. (N.D). How to Use ssh-keygen to Generate a New SSH Key?<br>
 https://www.ssh.com/academy/ssh/keygen#:~:text=Ssh-keygen%20is%20a%20tool%20for%20creating%20new
 
-DigitalOcean. (2024). How to Install and Configure doctl.
+DigitalOcean. (2024). How to Install and Configure doctl.<br>
 https://docs.digitalocean.com/reference/doctl/how-to/install/
 
-DigitalOcean. (2024). Command Line Interface (CLI) Reference for doctl.
+DigitalOcean. (2024). Command Line Interface (CLI) Reference for doctl.<br>
 https://docs.digitalocean.com/reference/doctl/reference/
 
-DigitalOcean. (2024). How to Create A Personal Access Token.
+DigitalOcean. (2024). How to Create A Personal Access Token.<br>
 https://docs.digitalocean.com/reference/api/create-personal-access-token/
 
-DigitalOcean. (2014). How To Use Cloud-Config For Your Initial Server Setup.
+DigitalOcean. (2014). How To Use Cloud-Config For Your Initial Server Setup.<br>
 https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup
 
-Nathan McNinch. (2024). Class Notes.
+Nathan McNinch. (2024). Class Notes.<br>
 Weeks 1, 2, 3, 4
