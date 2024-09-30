@@ -341,7 +341,7 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 
 
 # Resources and Citations
-Arch Linux. (2024). pacman
+Arch Linux. (2024). pacman.
 https://wiki.archlinux.org/title/Pacman#:~:text=If%20you%20cannot%20enter%20the%20arch-chroot%20or
 
 SSH Academy. (N.D). How to Use ssh-keygen to Generate a New SSH Key?
@@ -355,6 +355,9 @@ https://docs.digitalocean.com/reference/doctl/reference/
 
 DigitalOcean. (2024). How to Create A Personal Access Token.
 https://docs.digitalocean.com/reference/api/create-personal-access-token/
+
+DigitalOcean. (2014). How To Use Cloud-Config For Your Initial Server Setup.
+https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup
 
 Nathan McNinch. (2024). Class Notes.
 Weeks 1, 2, 3, 4
