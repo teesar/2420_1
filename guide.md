@@ -288,16 +288,31 @@ doctl compute image list | grep Arch
 - Note: This searches Digital Ocean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
 
 2. Write down the number to the left of the image result.
+![alt text](image-36.png)
+
 3. Copy and paste the following command:
 ```
 doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel --image *** --user-data-file droplets.sh --ssh-keys *** --wait
 ```
 4. Delete the "***" after image and replace it with the number you wrote down on Instruction #2.
+
 5. Navigate to Digital Ocean and log in.
+
 6. Click Settings near the bottom of the left menu.
+![alt text](image-37.png)
+
+
 7. Click Security.
-8. Copy the Fingerprint of the key you created earlier.
+![alt text](image-38.png)
+
+
+8. Click the copy icon to copy the Fingerprint of the key you created earlier.
+![alt text](image-39.png)
+
+
 9. Back on the terminal window, delete the "***" after ssh-keys and replace it with with the key fingerprint you have copied.
-10. Enter the command. After a few moments you should receieve a message displaying statistics on your new droplet.
+
+10. Enter the command. After a few moments you should receieve a message that looks something like this:
+![alt text](image-35.png)
 
 ## Congratulations! You've accomplished everything!
