@@ -24,6 +24,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: The -t flag defines the type of encryption the keys will use. In this case we'll be using the ed25519 standard.
 - Note: The -f flag defines where on your computer we want to store the newly created keys. In this case the keys will use "one_key" as the name.
 - Note: The -C flag allows us to create a comment for the keys. You can use this comment to help you differentiate between keys that you create, or add an identifier such as your email to mark it as one you created. In this case the keys will simply use the email address you enter.
+ - `(SSH Academy, 2024)`
 
 * You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your DigitalOcean account. 
 
@@ -215,6 +216,7 @@ sudo pacman -Syu
 - Note: sudo gives you permission to modify the system
 - Note: pacman is the package manager for installing, updating, or removing programs.
 - Note: The flag -Syu finds the latest updates for installed packages and applies them.
+- (Arch Linux, 2024)
 
 - Note: This may take several minutes to complete.
 
@@ -306,6 +308,7 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 - Note: the --user-data-file flag is used to specify a file which can automate configuration of the droplet
 - Note: the --ssh-keys flag is used to specify the ssh keys we want to use with this droplet
 - Note: the --wait flag is used to pause the command line until the command finishes and the droplet is created
+- (DigitalOcean, 2024)
 
 4. Delete the **"replacethis"** after image and replace it with the **number you wrote down on Instruction #2**.
 
@@ -333,3 +336,24 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 ## Congratulations! You've accomplished everything!
 
 ## You're a Linux Champ!
+
+
+
+# Resources and Citations
+Arch Linux. (2024). pacman
+https://wiki.archlinux.org/title/Pacman#:~:text=If%20you%20cannot%20enter%20the%20arch-chroot%20or
+
+SSH Academy. (N.D). How to Use ssh-keygen to Generate a New SSH Key?
+https://www.ssh.com/academy/ssh/keygen#:~:text=Ssh-keygen%20is%20a%20tool%20for%20creating%20new
+
+DigitalOcean. (2024). How to Install and Configure doctl.
+https://docs.digitalocean.com/reference/doctl/how-to/install/
+
+DigitalOcean. (2024). Command Line Interface (CLI) Reference for doctl.
+https://docs.digitalocean.com/reference/doctl/reference/
+
+DigitalOcean. (2024). How to Create A Personal Access Token.
+https://docs.digitalocean.com/reference/api/create-personal-access-token/
+
+Nathan McNinch. (2024). Class Notes.
+Weeks 1, 2, 3, 4
