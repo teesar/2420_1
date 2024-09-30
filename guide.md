@@ -74,7 +74,6 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: Your key names will be different from this sample image.
 11. Delete the Hostname text and replace it with a short nickname.
 12. Click Create Droplet.
-- Note: You can see your droplet resources by navigating to the project you created it under. If this is your first project on Digital Ocean it will likely be called first-project, and the link is at the top of the menu on the left.
 
 ## Step 6: Create Digital Ocean API Key
 1. Navigate to the Digital Ocean website and log in to your account. 
@@ -87,8 +86,72 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 7. Click the Copy icon to copy the personal access token, then save it in a safe place. 
 
-## Step 7: Doctl On Droplet
+## Step 7: Connect To Your Droplet Through SSH
+1. Open a terminal window on your computer.
+2. Copy and paste the following code into the terminal, but don't run it yet.
+```
+ssh -i .ssh/one_key arch@
+```
+2. Navigate to the Digital Ocean website and log in to your account.
+
+2. Click the name of the project you saved your droplet in at the top of the left menu.
+- Note: If this is your first Digital Ocean project, the project is likely called "first-project".
+
+3. Click the IP address of your droplet to copy it.
+
+4. Return to the terminal window you opened and paste the ip address after the @ from your entry.
+
+5. Press enter to run the command.
+- Note: The -i flag is used to set the path to the private SSH key you created earlier.
+- Note: The "arch" is a user that exists on the Arch Linux image.
+
+- Your terminal prompt will change to arch@ followed by the droplet name if you connect successfully.
+
+## Step 8: Install Software & Connect To Digital Ocean API
+
+1. Update your droplet by running the following command:
+```
+sudo pacman -Syu
+```
+- Note: sudo gives you permission to modify the system
+- Note: pacman is the package manager for installing, updating, or removing programs.
+- Note: The flag -Syu finds the latest updates for installed packages and applies them.
+
+- Note: This may take several minutes to complete.
+
+2. Install neovim and doctl on your droplet by running the following command:
+```
+sudo pacman -S neovim doctl
+```
+- Note: Doctl is the command line interface for accessing Digital Ocean that you'll use for further droplet creation.
+- Note: Neovim is a text editor you'll use to create a config file for automating aspects of droplet creation through the command line.
+
+- Note: This may take several minutes to complete.
+
+3. Run the following command to allow doctl to access your DigitalOcean account.
+```
+doctl auth init --context dev
+```
+- Note: The "dev" above is the label for your Digital Ocean account on doctl, you may change it to anything you like. 
+
+4. Enter the Digital Ocean API key that you created on step 6 when you are prompted for it.
+
+5. Run the following command to switch to the doctl account you just added.
+```
+doctl auth switch --context dev
+```
+- Note: If you changed the label for this account from dev on Instruction #3, replace it in the above code as well.
+
+6. Run the following command to confirm your setup was successful.
+```
+doctl account get
+```
+
 
 ## Step 8: Create Config File On Droplet
+1. Enter the following command to create a droplet configuration file.
+```
+nvim droplets.sh
+```
 
 ## Step 9: Create New Droplet 
