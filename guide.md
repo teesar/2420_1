@@ -33,40 +33,40 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
 
 2. Copy the text string inside one_key.pub.
-![alt text](image-32.png)
+![copying text image](image-32.png)
 
 
 3. Navigate to the DigitalOcean website and log in to your account.
 
 
 4. Click **Settings** on the left of the browser window.
-![alt text](image-33.png)
+![settings button image](image-33.png)
 
 
 5. Click the **Security** beneath the Settings heading.
-![alt text](image-34.png)
+![security button image](image-34.png)
 
 
 6. Click **Add SSH Key**.
-![alt text](image.png)
+![ssh key button image](image.png)
 
 7. Paste the text string you copied from one_key.pub into the **Public Key field**.
-![alt text](image-1.png)
+![key field image](image-1.png)
 
 8. Type in a name for your key in the **Key Name field**.
 - Note: The key name can be used to help differentiate between keys that you add to your DigitalOcean account. 
-![alt text](image-2.png)
+![key name field image](image-2.png)
 
 ## Step 3: Download Arch Linux Image
 
 1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
 
 2. Click **images** in the most recently uploaded row.
-![alt text](image-3.png)
+![images button image](image-3.png)
 
 
 3. Click the **image name** that contains "cloudimg" and ends in ".qcow2".
-![alt text](image-4.png)
+![image name button image](image-4.png)
 
 - Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
 
@@ -76,15 +76,15 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 1. Navigate to the DigitalOcean website and log in to your account.
 
 2. Click **Backups & Snapshots** on the menu on the left side of the screen.
-![alt text](image-5.png)
+![backups and snapshots button image](image-5.png)
 
 
 3. Click **Custom Images**.
-![alt text](image-6.png)
+![custom images button image](image-6.png)
 
 
 4. Click **Upload Image**.
-![alt text](image-7.png)
+![upload image button image](image-7.png)
 
 
 5. Browse your computer to find the image you downloaded and press Open.
@@ -92,15 +92,15 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 6. Click **Choose a Distribution**.
 7. Click **Arch Linux**.
-![alt text](image-9.png)
+![distribution image](image-9.png)
 
 8. Click the **Datacenter Region** closest geographically to your location.
 - Note: This is the server your image will be uploaded to, using the datacenter closest to your location will provide the lowest latency when accessing it. San Francisco shown here for demonstration purposes.
-![alt text](image-10.png)
+![datacenter region image](image-10.png)
 
 9. Click **Upload Image**.
 - Note: There will be a charge of $.06 per GB per month to store this image.
-![alt text](image-11.png)
+![upload image button image](image-11.png)
 
 
 ## Step 5: Create Droplent Running Arch Linux
@@ -108,71 +108,71 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 1. Navigate to the DigitalOcean website and log in to your account.
 
 2. Click **Create** near the top of the page.
-![alt text](image-12.png)
+![create button image](image-12.png)
 
 
 3. Click **Droplets**.
-![alt text](image-13.png)
+![droplets button image](image-13.png)
 
 
 4. Click the **Region** geographically closest to your location.
-![alt text](image-14.png)
+![region image](image-14.png)
 
 
 5. Click **Custom Images** below the Choose an image heading.
 
 6. Click the **image** you uploaded in step 4.
-![alt text](image-15.png)
+![image button image](image-15.png)
 
 
 7. Click **Premium Intel** or **Premium AMD** under the CPU options heading.
-![alt text](image-16.png)
+![cpu options image](image-16.png)
 
 
 8. Click the **$8/mo option**.
-![alt text](image-17.png)
+![monthly spend option image](image-17.png)
 
 
 9. Click **SSH Key** under the Choose Authentication Method heading.
-![alt text](image-18.png)
+![ssh key image](image-18.png)
 
 
 10. Click the **SSH key** that you added to your DigitalOcean Account.
 - Note: Your key names will be different from this sample image.
-![alt text](image-19.png)
+![ssh key image2](image-19.png)
 
 
 11. Delete the text in the **Hostname field** and replace it with a short **nickname**.
 12. Click **Create Droplet**.
-![alt text](image-20.png)
+![create droplet image](image-20.png)
 
 
 ## Step 6: Create DigitalOcean API Key
 
 1. Navigate to the DigitalOcean website and log in to your account. 
 2. Click **API**on the left menu near the bottom.
-![alt text](image-21.png)
+![api button image](image-21.png)
 
 
 3. Click **Generate New Token**.
-![alt text](image-22.png)
+![generate new token button image](image-22.png)
 
 
 4. Type a name for the token into the **Token Name field**.
-![alt text](image-23.png)
+![token name field image](image-23.png)
 
 
 5. Click **Full Access**. This will give your API key read and write permissions so that you can create and edit droplets through the command line.
-![alt text](image-24.png)
+![full access button image](image-24.png)
 
 
 6. Click **Generate Token**.
 - The page will redirect you to the API section and a personal access token will appear.
-![alt text](image-25.png)
+![generate token image](image-25.png)
 
 
 7. Click the **copy icon** to copy the personal access token, then save it in a safe place.
-![alt text](image-26.png) 
+![copy icon image](image-26.png) 
 
 
 ## Step 7: Connect To Your Droplet Through SSH
@@ -186,15 +186,15 @@ ssh -i .ssh/one_key arch@
 
 2. Click the **name of the project** you saved your droplet in at the top of the left menu.
 - Note: If this is your first DigitalOcean project, the project is likely called "first-project".
-![alt text](image-27.png)
+![first project name image](image-27.png)
 
 
 3. Click **Copy** next to the IP address of your droplet to copy it.
-![alt text](image-29.png)
+![copy ip icon](image-29.png)
 
 
 4. Return to the terminal window you opened and paste the ** after the @ from your entry.
-![alt text](image-30.png)
+![terminal entry sample image](image-30.png)
 
 
 5. Press **enter** to run the command.
@@ -241,7 +241,9 @@ doctl auth switch --context dev
 ```
 doctl account get
 ```
-![alt text](image-31.png)
+
+- If it was successful you should see:
+![active status image](image-31.png)
 
 
 ## Step 9: Create Config File On Droplet
@@ -286,8 +288,8 @@ doctl compute image list | grep Arch
 ```
 - Note: This searches DigitalOcean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
 
-2. Write down the **number to the left of the image result**.
-![alt text](image-36.png)
+2. Write down the **number to the left of the image result**. This references the specific image we want to use for our droplet.
+![image # image](image-36.png)
 
 3. Copy and paste the following command:
 ```
@@ -307,22 +309,22 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 5. Navigate to DigitalOcean and log in.
 
 6. Click **Settings** near the bottom of the left menu.
-![alt text](image-37.png)
+![settings button image](image-37.png)
 
 
 7. Click **Security**.
-![alt text](image-38.png)
+![security button image](image-38.png)
 
 
 8. Click the **copy icon** to copy the Fingerprint of the key you created earlier.
-![alt text](image-39.png)
+![fingerprint icon image](image-39.png)
 
 
 9. Back on the terminal window, delete the **"replacethis"** after ssh-keys and replace it with with the **key fingerprint** you have copied.
 
 10. Enter the command. After a few moments you should receieve a message that looks something like this:
-![alt text](image-35.png)
+![droplet confirmation image](image-35.png)
 - You will have another droplet up and running in your DigitalOcean project similar to this:
-![alt text](image-40.png)
+![new droplet image](image-40.png)
 
 ## Congratulations! You've accomplished everything!
