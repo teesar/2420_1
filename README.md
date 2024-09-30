@@ -197,7 +197,7 @@ ssh -i .ssh/one_key arch@
 ![copy ip icon](image-29.png)
 
 
-4. Return to the terminal window you opened and paste the ** after the @ from your entry.
+4. Return to the terminal window you opened and paste the ip address after the @ from your entry.
 ![terminal entry sample image](image-30.png)
 
 
