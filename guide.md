@@ -148,7 +148,7 @@ doctl account get
 ```
 
 
-## Step 8: Create Config File On Droplet
+## Step 9: Create Config File On Droplet
 1. Enter the following command to create a droplet configuration file.
 ```
 nvim droplets.sh
@@ -179,4 +179,24 @@ disable_root: true
 6. Hit the escape key.
 7. Type ":wq" and press enter. This will write and save the file then quit nvim.
 
-## Step 9: Create New Droplet 
+## Step 10: Create New Droplet 
+1. Run the following command to locate the image you uploaded earlier.
+```
+doctl compute image list | grep Arch
+```
+- Note: This searches Digital Ocean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
+
+2. Write down the number to the left of the image result.
+3. Copy and paste the following command:
+```
+doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel --image *** --user-data-file droplets.sh --ssh-keys *** --wait
+```
+4. Delete the "***" after image and replace it with the number you wrote down on Instruction #2.
+5. Navigate to Digital Ocean and log in.
+6. Click Settings near the bottom of the left menu.
+7. Click Security.
+8. Copy the Fingerprint of the key you created earlier.
+9. Back on the terminal window, delete the "***" after ssh-keys and replace it with with the key fingerprint you have copied.
+10. Enter the command. After a few moments you should receieve a message displaying statistics on your new droplet.
+
+## Congratulations! You've accomplished everything!
