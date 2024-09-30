@@ -62,7 +62,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 ## Step 5: Create Droplent Running Arch Linux
 1. Navigate to the Digital Ocean website and log in to your account.
-2. Click Create.
+2. Click Create near the top of the page.
 3. Click Droplets.
 4. Click the Region geographically closest to your location.
 5. Click Custom Images below the Choose an image heading.
@@ -74,11 +74,21 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: Your key names will be different from this sample image.
 11. Delete the Hostname text and replace it with a short nickname.
 12. Click Create Droplet.
+- Note: You can see your droplet resources by navigating to the project you created it under. If this is your first project on Digital Ocean it will likely be called first-project, and the link is at the top of the menu on the left.
 
-## Create Digital Ocean API Key
+## Step 6: Create Digital Ocean API Key
+1. Navigate to the Digital Ocean website and log in to your account. 
+2. Click API on the left menu near the bottom.
+3. Click Generate New Token.
+4. Type a name for the token into the Token Name field.
+5. Click Full Access. This will give your API key read and write permissions so that you can create and edit droplets through the command line.
+6. Click Generate Token.
+- The page will redirect you to the API section and a personal access token will appear.
 
-## Install Doctl On Droplet
+7. Click the Copy icon to copy the personal access token, then save it in a safe place. 
 
-## Create Config File On Droplet
+## Step 7: Doctl On Droplet
 
-## Create New Droplet 
+## Step 8: Create Config File On Droplet
+
+## Step 9: Create New Droplet 
