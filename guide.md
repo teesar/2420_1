@@ -26,29 +26,30 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ## Step 2: Add Public SSH Key to Digital Ocean Account
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
 2. Copy the text string inside one_key.pub.
-
+![alt text](image.png)
 
 3. Navigate to the Digital Ocean website and log in to your account.
 
 4. Click Settings on the left of the browser window.
-
+![alt text](image.png)
 
 5. Click the Security tab beneath the Settings heading.
-
+![alt text](image.png)
 
 6. Click Add SSH Key.
-
+![alt text](image.png)
 
 7. Paste the text string you copied from one_key.pub into the Public Key field.
+![alt text](image-1.png)
 
 8. Type in a name for your key in the Key Name field.
 - Note: The key name can be used to help differentiate between keys that you add to your Digital Ocean account. 
-
+![alt text](image-2.png)
 
 ## Step 3: Download Arch Linux Image
 1. Navigate to https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/ .
 2. Click images in the most recently uploaded row.
-
+![alt text](image-3.png)
 
 3. Click the image name that contains "cloudimg" and ends in ".qcow2".
 
