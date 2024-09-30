@@ -31,18 +31,18 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
 
 2. Copy the text string inside one_key.pub.
-![alt text](image.png)
+![alt text](image-32.png)
 
 
 3. Navigate to the Digital Ocean website and log in to your account.
 
 
 4. Click Settings on the left of the browser window.
-![alt text](image.png)
+![alt text](image-33.png)
 
 
 5. Click the Security tab beneath the Settings heading.
-![alt text](image.png)
+![alt text](image-34.png)
 
 
 6. Click Add SSH Key.
