@@ -17,12 +17,12 @@
 
 4. Open a terminal and run the following command:
 
-- Note: Replace username with your windows username. Replace email@gmail.com with your email.
+- Note: Replace username with your windows username. Replace `email@gmail.com` with your email.
 ```
 ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C 
 ```
 - Note: The -t flag defines the type of encryption the keys will use. In this case we'll be using the ed25519 standard.
-- Note: The -f flag defines where on your computer we want to store the newly created keys. In this case the keys will use "one_key" as the name. email@gmail.com
+- Note: The -f flag defines where on your computer we want to store the newly created keys. In this case the keys will use "one_key" as the name.
 - Note: The -C flag allows us to create a comment for the keys. You can use this comment to help you differentiate between keys that you create, or add an identifier such as your email to mark it as one you created. In this case the keys will simply use the email address you enter.
 
 * You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your DigitalOcean account. 
@@ -112,7 +112,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 3. Click **Droplets**.
-![droplets button image](image-13.png)
+![droplets button image](dropletsimg.png)
 
 
 4. Click the **Region** geographically closest to your location.
@@ -143,6 +143,9 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 
 11. Delete the text in the **Hostname field** and replace it with a short **nickname**.
+![alt text](hostnamechange.png)
+
+
 12. Click **Create Droplet**.
 ![create droplet image](image-20.png)
 
@@ -328,3 +331,5 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 ![new droplet image](image-40.png)
 
 ## Congratulations! You've accomplished everything!
+
+## You're a Linux Champ!
