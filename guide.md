@@ -1,7 +1,7 @@
 <!-- Start of the project -->
 # Assignment 1
 
-#### Today we will be going through the steps necessary to host a droplet (virtual private server) on your Digital Ocean account, securely access it using ssh keys, and use your droplet to create a second droplet with a set configuration.
+#### Today we will be going through the steps necessary to host a droplet (virtual private server) on your DigitalOcean account, securely access it using ssh keys, and use your droplet to create a second droplet with a set configuration.
 
 ## Step 1: Create SSH Keys
 
@@ -25,10 +25,10 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: The -f flag defines where on your computer we want to store the newly created keys. In this case the keys will use "one_key" as the name. email@gmail.com
 - Note: The -C flag allows us to create a comment for the keys. You can use this comment to help you differentiate between keys that you create, or add an identifier such as your email to mark it as one you created. In this case the keys will simply use the email address you enter.
 
-* You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your Digital Ocean account. 
+* You should now have two new files in your .ssh directory. The file called one_key is your private key, do not share this with anyone. The file called one_key.pub is your public key, and in the next step we will add it to your DigitalOcean account. 
 
 
-## Step 2: Add Public SSH Key to Digital Ocean Account
+## Step 2: Add Public SSH Key to DigitalOcean Account
 
 1. Navigate to your .ssh directory and open one_key.pub with Visual Studio Code.
 
@@ -36,7 +36,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ![alt text](image-32.png)
 
 
-3. Navigate to the Digital Ocean website and log in to your account.
+3. Navigate to the DigitalOcean website and log in to your account.
 
 
 4. Click **Settings** on the left of the browser window.
@@ -54,7 +54,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ![alt text](image-1.png)
 
 8. Type in a name for your key in the **Key Name field**.
-- Note: The key name can be used to help differentiate between keys that you add to your Digital Ocean account. 
+- Note: The key name can be used to help differentiate between keys that you add to your DigitalOcean account. 
 ![alt text](image-2.png)
 
 ## Step 3: Download Arch Linux Image
@@ -71,9 +71,9 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 - Note: The number on your version may be different than appears here. The download should start automatically and is roughly 500MB in size.
 
 
-## Step 4: Upload Arch Linux Image to Digital Ocean
+## Step 4: Upload Arch Linux Image to DigitalOcean
 
-1. Navigate to the Digital Ocean website and log in to your account.
+1. Navigate to the DigitalOcean website and log in to your account.
 
 2. Click **Backups & Snapshots** on the menu on the left side of the screen.
 ![alt text](image-5.png)
@@ -105,7 +105,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 
 ## Step 5: Create Droplent Running Arch Linux
 
-1. Navigate to the Digital Ocean website and log in to your account.
+1. Navigate to the DigitalOcean website and log in to your account.
 
 2. Click **Create** near the top of the page.
 ![alt text](image-12.png)
@@ -137,7 +137,7 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ![alt text](image-18.png)
 
 
-10. Click the **SSH key** that you added to your Digital Ocean Account.
+10. Click the **SSH key** that you added to your DigitalOcean Account.
 - Note: Your key names will be different from this sample image.
 ![alt text](image-19.png)
 
@@ -147,9 +147,9 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ![alt text](image-20.png)
 
 
-## Step 6: Create Digital Ocean API Key
+## Step 6: Create DigitalOcean API Key
 
-1. Navigate to the Digital Ocean website and log in to your account. 
+1. Navigate to the DigitalOcean website and log in to your account. 
 2. Click **API**on the left menu near the bottom.
 ![alt text](image-21.png)
 
@@ -182,10 +182,10 @@ ssh-keygen -t ed25519 -f C:\Users\username\.ssh\one_key -C
 ```
 ssh -i .ssh/one_key arch@
 ```
-2. Navigate to the Digital Ocean website and log in to your account.
+2. Navigate to the DigitalOcean website and log in to your account.
 
 2. Click the **name of the project** you saved your droplet in at the top of the left menu.
-- Note: If this is your first Digital Ocean project, the project is likely called "first-project".
+- Note: If this is your first DigitalOcean project, the project is likely called "first-project".
 ![alt text](image-27.png)
 
 
@@ -203,7 +203,7 @@ ssh -i .ssh/one_key arch@
 
 - Your terminal prompt will change to arch@ followed by the droplet name if you connect successfully.
 
-## Step 8: Install Software & Connect To Digital Ocean API
+## Step 8: Install Software & Connect To DigitalOcean API
 
 1. Update your droplet by running the following command:
 ```
@@ -219,7 +219,7 @@ sudo pacman -Syu
 ```
 sudo pacman -S neovim doctl
 ```
-- Note: Doctl is the command line interface for accessing Digital Ocean that you'll use for further droplet creation.
+- Note: Doctl is the command line interface for accessing DigitalOcean that you'll use for further droplet creation.
 - Note: Neovim is a text editor you'll use to create a config file for automating aspects of droplet creation through the command line.
 - Note: This may take several minutes to complete.
 
@@ -227,9 +227,9 @@ sudo pacman -S neovim doctl
 ```
 doctl auth init --context dev
 ```
-- Note: The "dev" above is the label for your Digital Ocean account on doctl, you may change it to anything you like. 
+- Note: The "dev" above is the label for your DigitalOcean account on doctl, you may change it to anything you like. 
 
-4. Enter the Digital Ocean API key that you created on step 6 when you are prompted for it.
+4. Enter the DigitalOcean API key that you created on step 6 when you are prompted for it.
 
 5. Run the following command to switch to the doctl account you just added.
 ```
@@ -284,7 +284,7 @@ disable_root: true
 ```
 doctl compute image list | grep Arch
 ```
-- Note: This searches Digital Ocean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
+- Note: This searches DigitalOcean for images that contain the word Arch. Your image should be the only one returned in the search results, but if not you can compare the name of the image to the one you downloaded to select the correct one.
 
 2. Write down the **number to the left of the image result**.
 ![alt text](image-36.png)
@@ -304,7 +304,7 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 
 4. Delete the **"replacethis"** after image and replace it with the **number you wrote down on Instruction #2**.
 
-5. Navigate to Digital Ocean and log in.
+5. Navigate to DigitalOcean and log in.
 
 6. Click **Settings** near the bottom of the left menu.
 ![alt text](image-37.png)
@@ -322,7 +322,7 @@ doctl compute droplet create archy --region sfo3 --size s-1vcpu-1gb-35gb-intel -
 
 10. Enter the command. After a few moments you should receieve a message that looks something like this:
 ![alt text](image-35.png)
-- You will have another droplet up and running in your project similar to this:
+- You will have another droplet up and running in your DigitalOcean project similar to this:
 ![alt text](image-40.png)
 
 ## Congratulations! You've accomplished everything!
